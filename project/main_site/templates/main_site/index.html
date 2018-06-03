@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HOME PAGE</title>
+    <script src={{url_for('static', filename='js/test.js')}}></script>
+  </head>
+  <body>
+    <h1>Projekty:</h1>
+    <ul>
+      <li><a href={{url_for('mickiewicz.index')}}>MICKIEWICZ</a></li>
+      <li><a href={{url_for('kosa_vs_harmasz.index')}}>KOSA VS HARMASZ</a></li>
+      <li><a href="{{url_for('tictactoe.index')}}">TIC TAC TOE</a></li>
+    </ul>
+  </body>
+</html>
