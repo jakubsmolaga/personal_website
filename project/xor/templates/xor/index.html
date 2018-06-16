@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>XOR</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.6">
+  </script>
+  <script src={{url_for( "xor.static", filename="p5.js" )}}></script>
+  <script src={{url_for( "xor.static", filename="script.js" )}}></script>
+  <link rel="stylesheet" href={{url_for( "xor.static", filename="style.css" )}}>
+</head>
+
+<body>
+  <div id="main_div">
+    <h1 id="header">XOR with tf.js</h1>
+    <div id="canvas_div">
+      <!-- p5.js canvas goes here -->
+    </div>
+    <p id="loss">loss: 1.00</p>
+  </div>
+  <footer>Created by Jakub Smolaga</footer>
+</body>
+
+</html>

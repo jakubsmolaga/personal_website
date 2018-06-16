@@ -26,3 +26,10 @@ h2 {
   color: white;
   text-shadow: 0px 0px 15px violet;
 }
+
+footer {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}

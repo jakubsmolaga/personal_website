@@ -6,6 +6,7 @@ let player;
 let pipes;
 let activePipeIndex;
 let paused;
+let won;
 let screenWidth;
 let screenHeight;
 let bot;
@@ -13,6 +14,7 @@ let bot;
 let background_image;
 let background_x;
 let pause_text;
+let you_win_text;
 
 function setup(){
   screenWidth = 800;
@@ -21,6 +23,7 @@ function setup(){
   background_image = document.getElementById('background');
   background_x = 0;
   pause_text = document.getElementById('text');
+  you_win_text = document.getElementById('you_win');
 
   player = new Bird(200, 225);
   player.image = document.getElementById('kosa');
@@ -47,6 +50,10 @@ function draw(){
     if (activePipeIndex >= pipes.length) activePipeIndex=0;
 
     if (pipes[activePipeIndex].checkCollision(player.getBounds())) setup();
+    if (pipes[activePipeIndex].checkCollision(bot.getBounds())){
+      bot.alive=false;
+      won=true;
+    }
 
     background_x-=pipes[0].velocity/2;
     if (background_x <= -852) background_x = 0;
@@ -55,7 +62,7 @@ function draw(){
   //drawing
   canvas.drawImage(background_image, background_x, 0, 852, 500);
   canvas.drawImage(background_image, background_x + 852, 0, 852, 500);
-  if (paused) canvas.drawImage(pause_text, 400, 100, 400, 300);
+  if (paused && !won) canvas.drawImage(pause_text, 400, 100, 400, 300);
   canvas.fillStyle = 'red';
   bot.draw(canvas);
   canvas.fillStyle = 'blue';
@@ -63,16 +70,17 @@ function draw(){
 
   canvas.fillStyle = 'green';
   for (i in pipes) pipes[i].draw(canvas);
+  if (won) canvas.drawImage(you_win_text, 0, 0, 800, 500);
 }
 
 function keyPressed(e){
   if(e.keyCode == 32){
-    paused=false;
-    player.jump();
+    mouseDown();
   }
 }
 
 function mouseDown(){
+  if(paused) won=false;
   paused=false;
   player.jump();
 }
