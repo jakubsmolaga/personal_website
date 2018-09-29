@@ -1,0 +1,33 @@
+input {
+    width: 300px;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Safari */
+    transform: rotate(-90deg);
+}
+table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -380px;
+    margin-top: -400px;
+    border-collapse: collapse;
+}
+tr, td {
+    border: 3px solid rgb(200, 200, 200);
+}
+.input_td {
+    height: 350px;
+    width: 100px;
+}
+.input_div {
+    margin-left: -105px;
+    margin-right: -150px;
+}
+.text_td {
+    text-align: center;
+}
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}

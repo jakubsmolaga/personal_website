@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fraktale</title>
+    <link rel="stylesheet" href={{url_for("fraktale.static", filename="style.css")}}>
+  </head>
+  <body>
+    <table border="1">
+        <tr>
+            <td colspan="3" class="text_td"><h1>Fraktale</h1></td>
+        </tr>
+        <tr>
+            <td class="text_td">liczba<br>wierchołków</td>
+            <td rowspan="3">
+                <canvas id="canvas" width="500px" height="500px"></canvas>
+            </td>
+            <td class="text_td">liczba<br>iteracji</td>
+        </tr>
+        <tr>
+            <td class="input_td">
+                <div class="input_div">
+                    <input type="range" id="ile_kat" value="3" min="1" max="20">
+                </div>
+            </td>
+            <td class="input_td">
+                <div class="input_div">
+                    <input type="range" id="iteracje" value="50" min="0" max="100">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="text_td" id="ile_kat_text">3</td>
+            <td class="text_td" id="iteracje_text">5000</td>
+        </tr>
+    </table>
+    <script src={{url_for("fraktale.static", filename="script.js")}}></script>
+
+    <footer>Wykonane przez: Jakub Smolaga</footer>
+</body>
+</html>
