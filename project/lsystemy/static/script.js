@@ -36,6 +36,7 @@ let move=()=>{
     let xd = length * Math.cos(angle);
     x+=xd;
     y+=yd;
+    ctx.moveTo(x, y);
 }
 let addToStack=()=>{
     let object = {
