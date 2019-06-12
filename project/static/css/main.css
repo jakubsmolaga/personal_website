@@ -1,3 +1,11 @@
+/*
+  COLORS:
+  #5BC8AC
+  #98DBC6
+  #E6D27A
+  #f18d9e
+*/
+
 html {
   font-size: 3vh;
 }
@@ -19,15 +27,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-/*
-  COLORS:
-  #5BC8AC
-  #98DBC6
-  #E6D27A
-  #f18d9e
-*/
 .navbar {
-  /* background-color: #5BC8AC; */
   height: 3rem;
   display: block;
   position: absolute;
@@ -97,6 +97,7 @@ a {
 .project-div {
   text-align: center;
   position: relative;
+  transition: box-shadow 0.6s;
 }
 .project-div img {
   position: absolute;
@@ -108,9 +109,7 @@ a {
 }
 .project-div .description {
   position: absolute;
-  /* display: none; */
   transition: opacity 0.6s;
-
   opacity: 0;
   bottom: 0;
   padding: 3rem;
@@ -118,7 +117,11 @@ a {
   background-color: rgba(0,0,0, 0.3);
 }
 .project-div:hover .description {
-  /* display: block; */
   opacity: 1;
   transition: opacity 0.4s;
+}
+.project-div:hover {
+  box-shadow: 0px 0px 2rem rgba(0,0,0,0.5);
+  transition: box-shadow 0.4s;
+  z-index: 1000;
 }
