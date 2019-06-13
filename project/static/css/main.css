@@ -125,3 +125,18 @@ a {
   transition: box-shadow 0.4s;
   z-index: 1000;
 }
+@media only screen and (max-width: 768px){
+  html {
+    font-size: 4.35vw;
+  }
+  .header span {
+    width: 90%;
+  }
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 100vw;
+  }
+  .project-div .description {
+    opacity: 1;
+  }
+}
