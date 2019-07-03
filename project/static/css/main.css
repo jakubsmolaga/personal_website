@@ -6,8 +6,20 @@
   #f18d9e
 */
 
+@font-face {
+  font-family: 'customFont';
+  src: url('../fonts/CooperHewitt-Light.woff');
+}
+@font-face {
+  font-family: 'customFont';
+  src: url('../fonts/CooperHewitt-Heavy.woff');
+  font-weight: bold;
+}
+
 html {
   font-size: 3vh;
+  font-family: 'customFont', Fallback, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,11 +28,11 @@ body {
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/static/img/tulips.jpg"),
+    url("../img/tulips.jpg"),
     #98DBC6;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 30rem;
+  min-height: 100vh;
 }
 
 a {
@@ -44,7 +56,7 @@ a {
 .navbar-link {
   color: white;
   display: inline-block;
-  height: 5rem;
+  height: 15vh;
   line-height: 5rem;
   margin: 0;
   padding: 0;
@@ -57,26 +69,26 @@ a {
 .header {
   position: absolute;
   color: white;
-  top: 5rem;
+  top: 15vh;
   left: 0;
   width: 100%;
-  height: 20rem;
+  height: 85vh;
   padding: 0;
   margin: 0;
-  line-height: 20rem;
+  line-height: 75vh;
   text-align: center;
 }
 .header span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
-  max-width: 27rem;
+  max-width: 31rem;
 }
 
 .projects {
   position: absolute;
   left: 0;
-  top: 30rem;
+  top: 100vh;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -125,7 +137,79 @@ a {
   transition: box-shadow 0.4s;
   z-index: 1000;
 }
-@media only screen and (max-width: 980px){
+.about {
+  position: absolute;
+  top: 100vh;
+  margin-top: 99vw;
+  background-color: #E6D27A;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  line-height: 100vh;
+  font-size: 2rem;
+  left: 0;
+}
+.about span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  width: 32rem;
+  max-width: 90%;
+  font-weight: bold;
+}
+.contact {
+  position: absolute;
+  top: 200vh;
+  margin-top: 99vw;
+  background-color: #5BC8AC;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  line-height: 100vh;
+  font-size: 2rem;
+  left: 0;
+}
+.contact span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  width: 29rem;
+  max-width: 90%;
+  font-weight: bold;
+}
+.contact i {
+  font-size: 1.8rem;
+}
+#scrollToTop {
+  position: fixed;
+  bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  left: 50%;
+  margin-left: -2rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2000;
+  background-color: #5BC8AC;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: box-shadow 0.3s, opacity 0.3s;
+  box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.5);
+}
+#scrollToTop:hover {
+  box-shadow: 0rem 0rem 2rem rgba(0,0,0,0.5);
+  transition: box-shadow 0.3s, opacity 0.3s;
+}
+.visible {
+  opacity: 1 !important;
+  transition: box-shadow 0.3s, opacity 1s !important;
+}
+@media only screen and (max-width: 768px){
   html {
     font-size: 4.35vw;
   }
@@ -138,5 +222,11 @@ a {
   }
   .project-div .description {
     opacity: 1;
+  }
+  .about {
+    margin-top: 700vw;
+  }
+  .contact {
+    margin-top: 700vw;
   }
 }

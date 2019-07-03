@@ -4,61 +4,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="google-site-verification" content="h0_jNNYetGhfqCIfpGsHgNG_sU4lvyr5WBvyiWLf9P8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <title>Kuba Smolaga</title>
-  <link rel="stylesheet" href={{url_for( 'static', filename='css/main.css' )}}>
-  <script src={{url_for( 'static', filename='js/test.js' )}}></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.js"></script>
 </head>
 
 <body>
-  <div class="navbar">
-    <a class="navbar-link" href="/contact">CONTACT</a>
-    <a class="navbar-link" href="/about">ABOUT ME</a>
-    <a class="navbar-link" href="/">PROJECTS</a>
-  </div>
+  <section id="landing" class="navbar">
+    <a class="navbar-link" href="#contact">CONTACT</a>
+    <a class="navbar-link" href="#about">ABOUT ME</a>
+    <a class="navbar-link" href="#projects">PROJECTS</a>
+  </section>
   <h1 class="header">
       <span>
         My name is Kuba, I make alot of stuff becouse its fun to do so.
       </span>
     </h1>
-  <div class="projects">
+  <section class="projects" id="projects">
     <a class="project-div a" href="https://pracabezgranic.pl/">
-      <img src="/static/img/pracabezgranic.jpg">
+      <img src="/img/pracabezgranic.jpg">
       <div class="description">
         I made this website with 3 of my friends to help disabled people find jobs in poland.
       </div>
     </a>
     <a class="project-div b" href="https://dane.gov.pl/">
-      <img src="/static/img/danegovpl.jpg">
+      <img src="/img/danegovpl.jpg">
       <div class="description">
         I collaborated on this project with polish government. Its a website with public data.
       </div>
     </a>
-    <div class="project-div c">
-      <!-- <img src="/static/img/pracabezgranic.jpg"> -->
-    </div>
-    <div class="project-div b">
-      <!-- <img src="/static/img/pracabezgranic.jpg"> -->
-    </div>
-    <div class="project-div c">
-      <!-- <img src="/static/img/pracabezgranic.jpg"> -->
-    </div>
-    <div class="project-div a">
-      <!-- <img src="/static/img/pracabezgranic.jpg"> -->
-    </div>
-    <div class="project-div c">
-      <!-- <img src="/static/img/pracabezgranic.jpg"> -->
-    </div>
-  </div>
-  <!-- <h1>Jakub Smolaga</h1>
-    <h1>Projekty:</h1>
-    <ul>
-      <li><a href={{url_for('mickiewicz.index')}}>MICKIEWICZ</a></li>
-      <li><a href={{url_for('xor.index')}}>XOR</a></li>
-      <li><a href={{url_for('kosa_vs_harmasz.index')}}>KOSA VS HARMASZ</a></li>
-      <li><a href={{url_for('tictactoe.index')}}>TIC TAC TOE</a></li>
-      <li><a href={{url_for('lsystemy.index')}}>INTERPRETER L-SYSTEMÓW</a></li>
-      <li><a href={{url_for('fraktale.index')}}>FRAKTALE</a></li>
-    </ul> -->
+    <a class="project-div c" href="https://smolaga.herokuapp.com/kosa_vs_harmasz">
+      <img src="/img/kosavsharmasz.jpg">
+      <div class="description">
+        Its just a simple game making fun of my friends but the enemy is controlled by a neural network trained through evolution :o
+      </div>
+    </a>
+    <a class="project-div b" href="https://smolaga.herokuapp.com/tictactoe">
+      <img src="/img/tictactoe.jpg">
+      <div class="description">
+        This is a tic-tac-toe bot I made. It is technicaly unbeatable.
+      </div>
+    </a>
+    <a class="project-div c" href="https://smolaga.herokuapp.com/lsystemy">
+      <img src="/img/lsystems.jpg">
+      <div class="description">
+        I once read about this thing called L-Systems so I decided to make this thing.
+      </div>
+    </a>
+    <a class="project-div a" href="https://smolaga.herokuapp.com/mickiewicz">
+      <img src="/img/mickiewicz.jpg">
+      <div class="description">
+        This app generates text based on a polish book "Dziady" by Adam Mickiewicz.
+      </div>
+    </a>
+    <a class="project-div c" href="https://smolaga.herokuapp.com/fraktale">
+      <img src="/img/fraktale.jpg">
+      <div class="description">
+        My teacher once talked to me about how if you generate random points in a specific way you will get some fractal structures so I made this.
+      </div>
+    </a>
+  </section>
+    <section class="about" id="about">
+      <span>
+        I'm just a young nerd from Poland who likes to create things.
+      </span>
+    </section>
+    <section class="contact" id="contact">
+      <span class="content">
+        Hit me up at<br><i class="fas fa-envelope"></i><br>me@kubasmolaga.pl
+      </div>
+    </section>
+    <a href="#landing" id="scrollToTop"><i class="fas fa-arrow-up"></i></a>
 </body>
 
 </html>
